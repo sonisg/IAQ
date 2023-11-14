@@ -96,7 +96,7 @@ public class ItemService {
                 System.out.println("Total price "+ totalPrice);
                 return cart;
             }else{
-                System.out.println("No item found");
+                System.out.println("No item found, list it");
             }
         } else {
             System.out.println("Add user");
