@@ -13,7 +13,24 @@ class Solution {
             }
         }
         return dp[m][n];
-        
+
+
+        To print subsequence;
+        int i = m, j = n;
+        StringBuilder result = new StringBuilder();
+        while (i > 0 && j > 0) {
+            if (text1.charAt(i - 1) == text2.charAt(j - 1)) {
+                result.insert(0, text1.charAt(i - 1));
+                i--;
+                j--;
+            } else if (dp[i - 1][j] > dp[i][j - 1]) {
+                i--;
+            } else {
+                j--;
+            }
+        }
+
+        return result.toString();
     }
 }
 
