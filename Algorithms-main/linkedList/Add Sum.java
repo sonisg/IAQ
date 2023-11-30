@@ -23,3 +23,8 @@ class Solution {
         return r.next;    
     }
 }
+
+
+Time complexity:
+    O(max(N, M)), where N and M are the lengths of the input linked lists. 
+    This is because the algorithm creates a new linked list to store the result, and the length of this result linked list is at most one more than the length of the longer input linked list.
