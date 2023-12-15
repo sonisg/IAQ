@@ -34,7 +34,7 @@ public class MinTimeToCollectApple {
             visited[node] = true;
             int time = 0;
 
-            for (int neighbor : graph.get(node)) {
+            for (int neighbor : graph.get(node)){
                 if (!visited[neighbor]) {
                     time += dfs(neighbor, graph, hasApple, visited);
                 }
