@@ -45,6 +45,7 @@ public class DFSGraph {
         adj.get(2).add(0);
         adj.get(2).add(3);
         adj.get(3).add(3);
+        adj.get(4).add(4);
 
         ArrayList<Integer> dfsResult = dfsGraph.dfsOfGraph(V, adj);
         System.out.println("Depth First Traversal: " + dfsResult);
