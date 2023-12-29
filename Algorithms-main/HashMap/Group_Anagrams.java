@@ -4,7 +4,7 @@ public List<List<String>> groupAnagrams(String[] strs) {
 
     // Iterate through each word in the array
     for (String word : strs) {
-        // Sort the characters in the word to create a unique key
+        // Sort the characters in the word to create a unique keyy
         char[] wordChars = word.toCharArray();
         Arrays.sort(wordChars);
         String sortedWord = new String(wordChars);
