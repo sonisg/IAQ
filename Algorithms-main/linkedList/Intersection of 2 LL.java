@@ -28,3 +28,13 @@ public class Solution {
         return l;
     }
 }
+
+Algo:
+take out len of both linked list
+match the len of both linked list and move the pointer to next and make sure length of both ll are same.
+check till both the values are same and if not return the value.
+
+
+Time complexity: 
+O(m+n)
+    
