@@ -9,3 +9,7 @@ public boolean hasCycle(ListNode head) {
         }
         return false;   
     }
+
+
+Algo:
+create hashset, add the values and check if value still exits then it has loop.
