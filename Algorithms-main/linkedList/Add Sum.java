@@ -24,6 +24,13 @@ class Solution {
     }
 }
 
+Algo:
+1. Take a res linkedlist list and carry as 0.
+2. iterate till both ll are null, keep val of ll1 in x and ll2 in y.
+3. perform sum of both and add carry.
+4. carry = sum/10
+5. add sum%10 to res and move both the pointers.
+6. check for carry and add to res at last.
 
 Time complexity:
     O(max(N, M)), where N and M are the lengths of the input linked lists. 
