@@ -22,3 +22,14 @@ class Solution {
     return d.next;    
     }
 }
+
+
+Algo:
+create res ll.
+Check for less val till both the values are null and add accordingly.
+add the left values to result as it is.
+
+
+Time complexity:
+O(m+n)
+
