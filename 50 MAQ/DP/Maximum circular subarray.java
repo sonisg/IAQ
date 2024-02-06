@@ -1,22 +1,25 @@
 class Solution {
     public int maxSubarraySumCircular(int[] nums) {
-       int n = nums.length;
+        int n = nums.length;
         int[] dpMax = new int[n];
         int[] dpMin = new int[n];
         dpMax[0] = nums[0];
         dpMin[0] = nums[0];
         int totalSum = nums[0];
         int max = nums[0];
+        int min = nums[0];
         
         for (int i = 1; i < n; i++) {
             totalSum += nums[i];
             dpMax[i] = Math.max(nums[i], dpMax[i - 1] + nums[i]);
             dpMin[i] = Math.min(nums[i], dpMin[i - 1] + nums[i]);
             max = Math.max(max, dpMax[i]);
+            min = Math.min(min,dpMin[i]);
         }
         
-        int circularMax = totalSum - Arrays.stream(dpMin).min().getAsInt();
-        if (circularMax == totalSum || Arrays.stream(nums).allMatch(num -> num < 0)) {
+        int circularMax = totalSum - min;
+        boolean allNegative = Arrays.stream(nums).allMatch(num->num<0);
+        if (circularMax == totalSum || allNegative) {
             return max;
         } else {
             return Math.max(max, circularMax);
