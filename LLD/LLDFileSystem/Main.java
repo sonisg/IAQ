@@ -1,14 +1,21 @@
-package LLDObserverDP;
+package LLDCompositeDP;
 
 public class Main {
+    public static void main(String[] args) {
+        Directory root = new Directory("Root");
+        Directory documents = new Directory("Documents");
+        File textFile1 = new File("example1.txt", 100);
+        File textFile2 = new File("example2.txt", 150);
 
-    public static void  main (String args[]){
+        root.addComponent(documents);
+        root.addComponent(textFile1);
+        documents.addComponent(textFile2);
 
-        YouTubeChannel channel = new YouTubeChannel();
-        Subscriber aman = new Subscriber("aman");
-        Subscriber raman = new Subscriber("raman");
-        channel.subscribe(aman);
-        channel.subscribe(raman);
-        channel.notifyChanges();
+        root.ls();
+        documents.ls();
+
+        documents.delete();
     }
 }
+//root -> documents -> textFile2
+//     -> textFile1
