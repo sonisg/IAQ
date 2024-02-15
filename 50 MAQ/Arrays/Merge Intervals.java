@@ -29,7 +29,7 @@ public class MergeIntervals {
         // Add the last interval
         result.add(currentInterval);
 
-        // Convert the list to an array
+        //Convert the list to an array
         return result.toArray(new int[result.size()][]);
     }
 
@@ -37,7 +37,7 @@ public class MergeIntervals {
         int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
         int[][] mergedIntervals = merge(intervals);
 
-        // Output the merged intervals
+        //utput the merged intervals
         for (int[] interval : mergedIntervals) {
             System.out.println(Arrays.toString(interval));
         }
