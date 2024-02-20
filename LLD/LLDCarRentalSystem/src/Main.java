@@ -25,7 +25,7 @@ public class Main {
         vehicleService.addCars(car);
         vehicleService.addCars(car1);
 
-        carRentalReservationSystem.reserveVehicle(user, car, location1, location2, LocalDateTime.now().plusDays(1), LocalDateTime.now().plusDays(5));
+        carRentalReservationSystem.reserveVehicle(user,  car, location1, location2, LocalDateTime.now().plusDays(1), LocalDateTime.now().plusDays(5));
         carRentalReservationSystem.modifyBooking(1, LocalDateTime.now().plusDays(2), LocalDateTime.now().plusDays(8));
         carRentalReservationSystem.cancelBooking(1);
 
