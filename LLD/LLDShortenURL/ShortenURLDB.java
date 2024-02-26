@@ -9,8 +9,8 @@ public class ShortenURLDB {
     public HashMap<String, String> longToShortMap;
 
     public ShortenURLDB() {
-        shortToLongMap = new HashMap<>();
-        longToShortMap = new HashMap<>();
+        shortToLongMap = new  HashMap<>();
+        longToShortMap = new  HashMap<>();
     }
 
     public HashMap<String, String> getShortToLongMap() {
