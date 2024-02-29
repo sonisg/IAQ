@@ -1,8 +1,8 @@
 import java.util.Stack;
 
 class MyQueue {
-    private Stack<Integer> stack1; // Used for enqueue operation
-    private Stack<Integer> stack2; // Used for dequeue operation
+    private Stack<Integer> stack1; // Used for enqueue operations
+    private Stack<Integer> stack2; // Used for dequeue operations
 
     public MyQueue() {
         stack1 = new Stack<>();
