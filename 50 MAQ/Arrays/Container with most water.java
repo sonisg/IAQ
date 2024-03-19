@@ -2,7 +2,7 @@ class Solution {
     public int maxArea(int[] height) {
         int n = height.length;
         int min = 0;
-        int max = n-1;
+        int max = n-1;;
         int maxArea =0;
         while(min<max){
             int w = max - min;
