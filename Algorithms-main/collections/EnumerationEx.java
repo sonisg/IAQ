@@ -1,36 +1,18 @@
-package com.company.collections;
+package collections;
 
 import java.util.Enumeration;
 import java.util.Vector;
 
 public class EnumerationEx {
 
-    public static void main(String[] args)
-    {
-        // Creating a vector object
-        Vector v = new Vector();
+    public static void main(String args[]) {
+        Vector<Integer> v = new Vector<>();
+        v.add(1);
+        v.add(2);
 
-        // Iterating over vector object
-        for (int i = 0; i < 10; i++)
-            v.addElement(i);
-
-        // Printing elements in vector object
-        System.out.println(v);
-
-        // At beginning e(cursor) will point to
-        // index just before the first element in v
-        Enumeration e = v.elements();
-
-        // Checking the next element availability where
-        // condition holds true till there is a single
-        // element
-        // remaining in the List
-        while (e.hasMoreElements()) {
-            // Moving cursor to next element
-            int i = (Integer)e.nextElement();
-
-            // Print above elements in object
-            System.out.print(i + " ");
+        Enumeration<Integer> e= v.elements();
+        while(e.hasMoreElements()){
+            System.out.println(e.nextElement());
         }
     }
 }
